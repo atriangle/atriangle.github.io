@@ -5,6 +5,12 @@
         font-size: 21px;
         font-family: Helvetica, Arial, sans-serif;
       }
+      .imagebox{
+        text-align: center;
+      }
+      .imagebox img{
+        max-width: 100%;
+      }
       .wrapper{
         max-width: 900px;
         margin: 0 auto;
@@ -70,7 +76,7 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-46755810-1', 'citymish.github.io');
+      ga('create', 'UA-46755810-1', 'atriangle.github.io');
       ga('send', 'pageview');
 
 
@@ -81,28 +87,34 @@
       <div class="head"></div>
       <div class="content">
 <div class="message">
+<div class="imagebox">
+  <img src="images/atriangle.png" alt="">
+</div>
 <h1>
-This is A triangle.
+This is a triangle.
 </h1>
 <p>
 A triangle is a <u>bi-weekly newsletter</u> for <u>software engineers</u> who are looking for other engineers. The newsletters will announce existing or upcoming projects by engineers who are looking to collaborate with others engineers.<br />
 </p>
+<p><strong>Note: Designers, recruiters, or people with great product ideas (but need a technical person) <a href="/fordesigners.html">click here.</a></strong></p>
 <nav style="margin-bottom: 1em">
-  <small>
-    Questions:
-    <a href="#why">Why</a>
-    <a href="#what">What</a>
-    <a href="#how">How</a>
-    <a href="#who">Who</a>
-  </small>
+    <small>
+    <a href="#mc_embed_signup">Subscribe</a>
+    </small> /
+    <small>
+    <a href="#qna">Questions</a>
+    </small> /
+    <small>
+    <a href="mailto:lenny@atriangle.com">Contact</a>
+    </small>
 </nav>
 </div>
 
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
-<form action="http://citymish.us3.list-manage.com/subscribe/post?u=6958a0dbc292076edcce5ee92&amp;id=6694703d62" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-<h2>Subscribe to A triangle</h2>
+<form action="http://atriangle.us3.list-manage.com/subscribe/post?u=6958a0dbc292076edcce5ee92&amp;id=6694703d62" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<h2>Subscribe to a triangle</h2>
 <div class="mc-field-group">
   <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 </label>
@@ -197,7 +209,7 @@ function mce_init_form(){
       var options = { errorClass: 'mce_inline_error', errorElement: 'div', onkeyup: function(){}, onfocusout:function(){}, onblur:function(){}  };
       var mce_validator = $("#mc-embedded-subscribe-form").validate(options);
       $("#mc-embedded-subscribe-form").unbind('submit');//remove the validator so we can get into beforeSubmit on the ajaxform, which then calls the validator
-      options = { url: 'http://citymish.us3.list-manage2.com/subscribe/post-json?u=6958a0dbc292076edcce5ee92&id=6694703d62&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
+      options = { url: 'http://atriangle.us3.list-manage2.com/subscribe/post-json?u=6958a0dbc292076edcce5ee92&id=6694703d62&c=?', type: 'GET', dataType: 'json', contentType: "application/json; charset=utf-8",
                     beforeSubmit: function(){
                         $('#mce_tmp_error_msg').remove();
                         $('.datefield','#mc_embed_signup').each(
@@ -330,53 +342,73 @@ function mce_success_cb(resp){
       <div class="footer">
 <strong>This list will not promote any projects that are led by non-technical people. The list will not be shared, sold or used for recruiters.</strong><br />
 <p>
-For questions, please email <a href="mailto:citymish@atriangle.com?subject=%5BNewsletter%20question%5D" target="_self">citymish@atriangle.com</a>.<br />
+For questions, please email <a href="mailto:lenny@atriangle.com?subject=%5BNewsletter%20question%5D" target="_self">lenny@atriangle.com</a>.<br />
 </p>
 
 <hr>
 
-<h3>Questions and Answers</h3>
+<h3 id="qna">Questions and Answers</h3>
 <ul>
-  <li><a href="#Qwhy1">Q: Why are you doing this?</a></li>
-  <li><a href="#Qwhy2">Q: Why should we trust you? Couldnt you just sell our 'attention' to advertisers or market</a> our emali addresses to recruiters?</h3>
-  <li><a href="#Qhow1">Q: How are you going to manage this?</a></li>
-  <li><a href="#Qwhat1">Q: What are you doing?</a></li>
-  <li><a href="#Qwhat2">Q: What happens to my email address after I signup?</a></li>
-  <li><a href="#Qwho1">Q: Who are you?</a></li>
+  <li><a href="#Qwhy1">Why are you doing this?</a></li>
+  <li><a href="#Qwhy2">Why should we trust you?</h3>
+  <li><a href="#Qhow1">How are you going to manage this?</a></li>
+  <li><a href="#Qwhat1">What are you doing?</a></li>
+  <li><a href="#Qwhat2">What happens to my email address after I sign-up?</a></li>
+  <li><a href="#Qwho1">Who are you?</a></li>
 </ul>
 
 
       <div id="why">
         <h3 id="Qwhy1">Q: Why are you doing this?</h3>
-        <p>Engineers need a place to meet other engineers. We need a venue that showcases projects on a high-level. We are tired of being presented technical co-founder opportutnities or recruitment positions. We need a way to meet other developers who are interested in solving problems that match our skillset. This is trying to solve that gap.</p>
+        <p>Engineers need a place to meet other engineers. We need a venue that showcases projects on a high-level. We are tired of being presented technical co-founder opportunities or recruitment positions. We need a way to meet other developers who are interested in solving problems that match our skill-set. This is trying to solve that gap.</p>
         <p>Software developers are lonely. Freelancers in particular struggle with finding balance when working from home. Developers passively lurk Reddit and HackerNews to find the next attention piece. Sometimes when a question comes up, we use StackOverflow or Quora to ask questions. Email newsletters help us find the signal in all the noise, but we need a place to connect with other developers. We need a relevant platform to work with other developers</p>
-        <p>There are venues for entreprenuers to find technical help. Recruiters have plenty of venues to scout technical skills. Designers have great platforms to display and view their work. Developers have github, but its not great for high level exposure to other developers. HackerNews and Reddit are great for information consumption, but breed cynicism in community exchange. We need a place that allow developers to connect with developers ideas.</p>
+        <p>There are venues for entrepreneurs to find technical help. Recruiters have plenty of venues to scout technical skills. Designers have great platforms to display and view their work. Developers have github, but its not great for high level exposure to other developers. HackerNews and Reddit are great for information consumption, but breed cynicism in community exchange. We need a place that allow developers to connect with developers ideas.</p>
         <p>We need a place to bounce ideas off other engineers. We need a place to see what other people are working on. Enough with the "co-founder" platforms. Not all projects need to be businesses. We have a lot of ideas and limited bandwidth, so we need to pick carefully. We dont always have refined ideas, so we need a place to find others who will help us clarify what we should focus on.</p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
 
         <h3 id="Qwhy2">Q: Why should we trust you?</h3>
-        <p>I have written about <strong>the importance of meeting strangers</strong> in the past. I have no desire to collect and sell your information. In fact, I have researched and presented on data privacy and information collection in the past. You'll have to trust me. You can see what <a href="http://www.twitter.com/rememberlenny">I've done in the past</a> if you have any questions.</p>
-        <p>Look at the upside: if people find this useful, you can make smart friends who you can collaborate with in the future. Worst case scenario, you have to click 'unsubscribe' after you find the quality of posts to be understatisfactory.</p>
+        <p>I have written about <strong><a href="http://blog.rememberlenny.com/blog/2013/06/15/on-meeting-strangers/">the importance of meeting strangers</a></strong> in the past. I have no desire to collect and sell your information. In fact, I have researched and presented on data privacy and information collection in the past. You'll have to trust me. You can see what <a href="http://www.twitter.com/rememberlenny">I've done in the past</a> if you have any questions.</p>
+        <p>Look at the upside: if people find this useful, you can make smart friends who you can collaborate with in the future. Worst case scenario, you have to click 'unsubscribe' after you find the quality of posts to be unsatisfactory.</p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
       </div>
       <div id="how">
 
         <h3 id="Qhow1">Q: How are you going to manage this?</h3>
         <p>I do a lot of logistical communication for work and personal organizations. This will be another email list I manage. I would be happy to keep it going if people get value out of it. I expect spending no more than 2 hours a week on collecting emails and formating links to send out.</p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
 
         <h3 id="Qhow2">Q: How long did this take you?</h3>
-        <p>Writing out the content forced me to think through why I was doing this. The mailchimp stuff was straight forward. It took me 10 minutes to setup. I spent longer than exepcted writing the content.</p>
+        <p>Writing out the content forced me to think through why I was doing this. My grand mother told me about a study on NPR about creative people doing work alone and I decided to write this up. The mailchimp stuff took me 10 minutes to setup. I spent longer than expected writing the content.</p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
       </div>
       <div id="what">
         <h3 id="Qwhat1">Q: What are you doing?</h3>
-        <p>Im creating an opportunity for developers to reach out to other developers. Specifically, Im keeping out non-developers (recruiters, 'entreprenuers', designers) from reaching out to developers. The goal is to create a healthy exchange of developers who have personal projects or are looking for new projects to work on.</p>
+        <p>Im creating an pleasantly infrequent email newsletter for developers to reach out to other developers. Im keeping out non-developers (recruiters, 'entrepreneurs', designers) from reaching out to developers. The goal is to create a healthy exchange of developers who have personal projects or are looking for new projects to work on. Maybe later we can add designers, product people, and peanut galleries (in that order).</p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
 
-        <h3 id="Qwhat2">Q: What happens to my email address after I signup?</h3>
+        <h3 id="Qwhat2">Q: What happens to my email address after I sign-up?</h3>
         <p>You join the mailchimp email list. I wont sell you email to any organization. I wont give access to the list to anyone. If this doesnt get any traction, then your email will stay with the list. </p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
       </div>
       <div id="who">
 
         <h3 id="Qwho1">Q: Who are you?</h3>
-        <p>Im <a href="http://www.rememberlenny.com">Lenny Bogdonoff</a>. I work as a fulltime software engineer and hack on personal projects. I have a background in graffiti art and hardware hacking. I attend a lot of meetups and conferences.</p>
+        <p>Im <a href="http://www.rememberlenny.com">Lenny Bogdonoff</a>. I work as a <a href="http://github.com/rememberlenny">fulltime software engineer</a> and hack on personal projects. I have a background in <a href="http://flickr.com/horsegoo">graffiti art</a> and hardware hacking. I <a href="https://www.google.com/search?as_q=rememberlenny&as_epq=&as_oq=&as_eq=&as_nlo=&as_nhi=&lr=&cr=&as_qdr=all&as_sitesearch=meetup.com&as_occt=any&safe=images&tbs=&as_filetype=&as_rights=#as_qdr=all&lr=&q=rememberlenny+meetup">attend a lot of meetups</a> and conferences.</p>
+        <small><a href="#mc_embed_signup">Subscribe</a></small> /
+        <small><a href="#qna">More Questions</a></small>
       </div>
+
+    <hr>
+
+    <a href="#mc_embed_signup">Subscribe</a> /
+    <a href="#qna">Questions</a> /
+    <a href="mailto:lenny@atriangle.com">Contact</a>
 
     </div>
      </div>
